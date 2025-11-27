@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Button Test</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050816;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px 28px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(16px);
+      width: 350px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    #message {
+      font-size: 80px; /* REALLY BIG */
+      font-weight: 700;
+      margin-top: 20px;
+      line-height: 1.1;
+      word-break: break-word;
+      min-height: 90px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 22px;
+      font-size: 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ff3b3b, #ff6b6b);
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      box-shadow: 0 8px 24px rgba(255, 59, 59, 0.4);
+    }
+
+    button:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 12px 30px rgba(255, 59, 59, 0.5);
+    }
+
+    button:active {
+      transform: translateY(1px) scale(0.98);
+      box-shadow: 0 4px 16px rgba(255, 59, 59, 0.35);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Click the button 👀</h1>
+    <button id="btn">Click me</button>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("btn");
+    const message = document.getElementById("message");
+
+    btn.addEventListener("click", () => {
+      message.textContent = "fuck you";
+    });
+  </script>
+</body>
+</html>
